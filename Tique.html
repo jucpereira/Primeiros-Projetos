@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>Check - Compras</title>
+                <link rel="stylesheet" href="Tique.css">
+                <!--programação-->
+            
+            </head>
+            
+<body>
+
+    <h1>O que comprar hoje?</h1>
+    <hr>
+<h2>
+    <input onchange="meucheck()" id="Bicicleta" type="checkbox"> Comprar uma bicicleta
+    <br>
+    <input onchange="meucheck()" id="carro" type="checkbox" name="transporte"> Comprar um carro
+    <br>
+    <input onchange="meucheck()" id="moto" type="checkbox" name="transporte"> Comprar uma Moto
+    <br>
+</h2>
+    <img id="Bicicletajpg">
+    <img id="carrojpg">
+    <img id="motojpg">
+
+
+    <script>
+       // function funcbike() {
+         //   alert("teste")
+     //   }
+
+        function meucheck() {
+            var carro = document.getElementById("carro");
+            var bicicleta = document.getElementById("Bicicleta");
+            var Moto = document.getElementById("moto");
+
+        // alert(carro.checked)
+            if (carro.checked) {
+                document.getElementById("carrojpg").src = "carro.jpg";
+            } else {
+                document.getElementById("carrojpg").src = "";
+            }
+
+            if (Moto.checked) {
+                document.getElementById("motojpg").src = "moto.jpg";
+            } else {
+                document.getElementById("motojpg").src = "";
+            }
+            if (Bicicleta.checked) {
+                document.getElementById("Bicicletajpg").src = "bicicleta.jpg";
+            } else {
+                document.getElementById("Bicicletajpg").src = "";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

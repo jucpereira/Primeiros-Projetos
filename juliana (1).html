@@ -1,0 +1,85 @@
+<html>
+<!--para comentarios dentro de tag e para script somente o //-->
+<head>
+    <title>Juliana</title>
+    <style>
+        h1 {
+            color: green;
+            text-align: center;
+            margin: 0px;
+        }
+
+        body {
+            background-color: greenyellow;
+        }
+
+        ul {
+            color: pink;
+            background-color: brown;
+            font-size: 30px;
+            margin: 0px;
+        }
+
+        .minhaprimeiraclasse {
+            background-color: cyan;
+        }
+    </style>
+    <!--programação-->
+    <script>
+        function minhaprimeirafuncao(texto) {
+            alert(texto)
+        }
+        function minhasegundafuncao() {
+            //document lê tudo - pega os elementos que estão em parenteses
+            //var tomate = document.getElementsByTagName("input")[0].value
+            var tomate = document.getElementById("txtcadastro").value;
+            var raizquadrada = tomate * tomate;
+            alert(raizquadrada);
+            alert(tomate);
+        }
+        function meuselect() {
+            var Nome=document.getElementById("meuselect").value;
+            alert(Nome);
+            alert("ai carai");
+
+        }
+    </script>
+</head>
+
+<body>
+    <h1 class="minhaprimeiraclasse">Juliana Pereira</h1>
+    <ul>
+        <li>Gilberto</li>
+        <li>Gustavo</li>
+        <li>Luana</li>
+
+    </ul>
+    <div class="minhaprimeiraclasse">
+        Cadastro
+        <input type="text" id="txtcadastro">
+        </input>
+        <hr> Nome
+        <select id="meuselect" onclick="meuselect()">
+            <option>
+                Gustavo
+            </option>
+            <option>
+                    Juliana
+                </option>
+                <option>
+                        Gilberto
+                    </option>
+                
+        </select>
+        <!--onclick quando clica-->
+        <button onclick='minhasegundafuncao()'>
+            Salvar
+        </button>
+    </div>
+    <div id="divresultado">
+
+    </div>
+
+</body>
+
+</html>

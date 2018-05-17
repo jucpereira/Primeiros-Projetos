@@ -1,0 +1,63 @@
+<html>
+<!--para comentarios dentro de tag e para script somente o //-->
+
+<head>
+    <title>Soma</title>
+    <link rel="stylesheet" href="java.css">
+    <!--programação-->
+
+</head>
+
+<body>
+    <h1>Soma</h1>
+
+    <input id="a" type="number" value="">
+    <select id="sinais">
+        <option value="0">+</option>
+        <option value="1">-</option>
+        <option value="2">*</option>
+        <option value="3">/</option>
+    </select>
+    <input id="b" type="number" value="">
+    <button type="button" onclick="meucalculo()">Soma</button>
+    <br>
+    <h2>
+        <span id="resultado"> </span>
+    </h2>
+
+    <script>
+
+        function meucalculo() {
+            var a = document.getElementById("a").value;
+            a = parseInt(a);
+            var b = document.getElementById("b").value;
+            b = parseInt(b);
+            var sinal = document.getElementById("sinais").value;
+            var resultadomult = a * b;
+            var resultadomais = a + b;
+            var resultadomenos = a - b;
+            var resultadodividir = a / b;
+
+            // alert(sinal)
+            switch (sinal) {
+                case "0":
+                    document.getElementById("resultado").innerHTML = resultadomais;
+                    break;
+                case "1":
+                    document.getElementById("resultado").innerHTML = resultadomenos;
+                    break;
+                case "2":
+                    document.getElementById("resultado").innerHTML = resultadomult;
+                    break;
+                case "3":
+                    document.getElementById("resultado").innerHTML = resultadodividir;
+            }
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<!--para comentarios dentro de tag e para script somente o //-->
+
+<head>
+    <title>Botão</title>
+    <link rel="stylesheet" href="botao.css">
+</head>
+
+<body id="vermelho">
+
+    <img id="carrojpg" src="carro.jpg" onmouseover="trocadeimagem()">
+    <!--img src="carro.jpg" onmouseover="botaoalert()"-->
+    <button onclick="botaoalert()"> Clique
+    </button>
+    <hr>
+    <div>
+        Digite
+        <input type="text" id="texto"> </input>
+        <!--button onclick="mesmotexto()"> Clique</button-->
+        <button onclick="mudarcorbody()"> Clique</button>
+    </div>
+    <hr>
+    <div>
+        <input type="text" id="trocafundo"> </input>
+        <!--button onclick="mesmotexto()"> Clique</button-->
+        <button onclick="trocafundoclique()"> Clique</button>
+    </div>
+    <hr>
+    <h1>
+        <input type="checkbox" id="escverde"> Verde? </input>
+        <input type="checkbox" id="escamarelo"> Amarelo? </input>
+    </h1>
+    <script>
+        function botaoalert() {
+            alert(document.getElementById("carrojpg").src);
+            //alert("Gustavo, seu lindo! S2");
+        }
+        function console() {
+            console.log("sajdjsabdj")
+        }
+        function trocadeimagem() {
+            document.getElementById("carrojpg").src = "moto.jpg";
+        }
+        function mesmotexto() {
+            alert(document.getElementById("texto").value);
+        }
+        function mudarcorbody() {
+            document.getElementById("vermelho").style.backgroundColor = document.getElementById("texto").value;
+
+            //alert (mudarcorbody);
+        }
+        function trocafundoclique() {
+            document.getElementById("vermelho").className = "amarelo";
+            document.getElementById("vermelho").className = "verde";
+        }
+    
+
+    </script>
+
+
+</body>
+
+</html>

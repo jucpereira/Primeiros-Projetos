@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <!--para comentarios dentro de tag e para script somente o //-->
+<meta charset="utf-8" />
 
 <head>
     <title>Botão</title>
@@ -9,6 +10,62 @@
 
 <body id="vermelho">
 
+    <img id="carrojpg" src="carro.jpg" onmouseover="trocadeimagem()">
+    <!--img src="carro.jpg" onmouseover="botaoalert()"-->
+    <button onclick="botaoalert()"> Clique
+    </button>
+    <hr>
+    <div>
+        <h2> Digite sua cor preferida </h2>
+        <input type="text" id="texto"> </input>
+        <!--button onclick="mesmotexto()"> Clique</button-->
+        <button onclick="mudarcorbody()"> Clique</button>
+    </div>
+    <hr>
+    <div>
+        <input type="text" id="trocafundo"> </input>
+        <!--button onclick="mesmotexto()"> Clique</button-->
+        <button onclick="trocafundoclique()"> Trocar</button>
+    </div>
+    <hr>
+    <h1>
+        <input onclick="mverde()" type="radio" name="radiocor" value="verde"> Verde? </input>
+        <input onclick="mamarelo()" type="radio" name="radiocor" value="amarelo"> Amarelo? </input>
+
+    </h1>
+
+    <hr>
+    <button onclick="caixadedialogo()">Qual a sua cor?</button>
+
+    <h3 id="mostretexto"></h3>
+    <hr>
+
+    <h4>Generos </h4>
+    <br>
+    <h5> Selecione
+        <select id="select" onchange="mostrar()">
+            <option value="Feminino">
+                Feminino
+            </option>
+            <option value="Masculino">
+                Masculino
+            </option>
+            <option value="Indefinido">
+                Indefinido
+            </option>
+
+        </select>
+        <h2>
+            <input onclick="mulherradio()" type="radio" name="radio" value="mulher"> Mulher </input>
+            <input onclick="homemradio()" type="radio" name="radio" value="homem"> Homem </input>
+            <input onclick="indefinidoradio()" type="radio" name="radio" value="indefinido"> Indefinido </input>
+        </h2>
+    </h5>
+    <h4>
+        <img id="mulher">;
+        <img id="homem">;
+        <img id="indefinido">;
+    </h4>
     <script>
         function botaoalert() {
             alert(document.getElementById("carrojpg").src);
@@ -25,22 +82,69 @@
         }
         function mudarcorbody() {
             document.getElementById("vermelho").style.backgroundColor = document.getElementById("texto").value;
-
-            //alert (mudarcorbody);
+            // alert("Ótima cor!");
         }
+        function trocafundoclique() {
+            document.getElementById("vermelho").className = document.getElementById("trocafundo").value
+            document.getElementById("vermelho").style.backgroundColor = "";
+        }
+        function mamarelo() {
+            document.getElementById("vermelho").className = "amarelo";
+            document.getElementById("vermelho").style.backgroundColor = "";
+
+        }
+        function mverde() {
+            document.getElementById("vermelho").className = "verde";
+            document.getElementById("vermelho").style.backgroundColor = "";
+        }
+        function caixadedialogo() {
+            var txt;
+            var teste = function caixadedialogo() {
+                document.getElementById("vermelho").style.backgroundColor = document.getElementById("cor").value;
+            }
+            var cor = prompt("Por favor, digite sua cor preferida:", );
+            if (cor == null || cor == "") {
+                txt = "Você não tem uma cor preferida =(";
+            } else {
+                txt = "LEGAL! Sua cor favorita é: " + cor + "! DEMAIS =D";
+                //   txt = function caixadedialogo(){ document.getElementById("vermelho").style.backgroundColor = document.getElementById("cor").value;
+            }
+            document.getElementById("mostretexto").innerHTML = txt;
+        }
+        function mostrar() {
+            var clique = document.getElementById("select").value;
+            //  alert(select);
+            if (clique == "Feminino") {
+                document.getElementById("mulher").src = "mulher.jpg";
+                //} else {
+                //  document.getElementById("mulher").src = "";
+            }
+            if (clique == "Masculino") {
+                document.getElementById("mulher").src = "homem.jpg";
+                // } else {
+                //   document.getElementById("homem").src = "";
+            }
+            if (clique == "Indefinido") {
+                document.getElementById("mulher").src = "indefinido.jpg";
+                // } else {
+                //   document.getElementById("indefinido").src = "";
+            }
+        }
+        function mulherradio() {
+            document.getElementById("mulher").src = "mulher.jpg";
+        }
+        function homemradio() {
+            document.getElementById("mulher").src = "homem.jpg";
+        }
+        function indefinidoradio() {
+            document.getElementById("mulher").src = "indefinido.jpg";
+        }
+
+           //alert(indefinido);
+
+
+
     </script>
-
-    <img id="carrojpg" src="carro.jpg" onmouseover="trocadeimagem()">
-    <!--img src="carro.jpg" onmouseover="botaoalert()"-->
-    <button onclick="botaoalert()"> Clique
-    </button>
-    <hr>
-    <div>
-        Digite
-        <input type="text" id="texto"> </input>
-        <!--button onclick="mesmotexto()"> Clique</button-->
-        <button onclick="mudarcorbody()"> Clique</button>
-    </div>
-
 </body>
+
 </html>

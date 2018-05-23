@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+
+<head>
+    <title>Generos</title>
+    <link rel="stylesheet" href="botao.css" />
+    </head>
+    <body>
+    <h4>Generos </h4>
+    
+    <h5> Selecione
+        <select id="select" onchange="mostrar()">
+            <option value="Feminino">
+                Feminino
+            </option>
+            <option value="Masculino">
+                Masculino
+            </option>
+            <option value="Indefinido">
+                Indefinido
+            </option>
+
+        </select>
+        <h2>
+            <input onclick="mulherradio()" type="radio" name="radio" value="mulher"> Mulher </input>
+            <input onclick="homemradio()" type="radio" name="radio" value="homem"> Homem </input>
+            <input onclick="indefinidoradio()" type="radio" name="radio" value="indefinido"> Indefinido </input>
+        </h2>
+    </h5>
+    <h4>
+        <img id="mulher">
+        <img id="homem">
+        <img id="indefinido">
+    </h4>
+<h2> Modelos de casas</h2>
+<input type="submit">
+
+<select id="selectcasa" onchange="alterarcasa()">
+    <option value="Campo"> Campo </option>
+    <option value="Praia"> Praia </option>
+    <option value="Cidade"> Cidade </option>
+</select>
+    <script>
+            function mostrar() {
+            var clique = document.getElementById("select").value;
+            //  alert(select);
+            if (clique == "Feminino") {
+                document.getElementById("mulher").src = "mulher.jpg";
+                //} else {
+                //  document.getElementById("mulher").src = "";
+            }
+            if (clique == "Masculino") {
+                document.getElementById("mulher").src = "homem.jpg";
+                // } else {
+                //   document.getElementById("homem").src = "";
+            }
+            if (clique == "Indefinido") {
+                document.getElementById("mulher").src = "indefinido.jpg";
+                // } else {
+                //   document.getElementById("indefinido").src = "";
+            }
+        }
+        function mulherradio() {
+            document.getElementById("mulher").src = "mulher.jpg";
+        }
+        function homemradio() {
+            document.getElementById("mulher").src = "homem.jpg";
+        }
+        function indefinidoradio() {
+            document.getElementById("mulher").src = "indefinido.jpg";
+        }
+
+           //alert(indefinido);
+    </script>
+    </body>
+    </html>

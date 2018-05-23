@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+
+<head>
+    <title>Pra onde você quer ir?</title>
+    <link rel="stylesheet" href="botao.css" />
+</head>
+
+<body>
+    <h1> Escolha seu próximo destino</h1>
+    <select id="selectdestino" onchange="alterardestino()">
+        <option value="Campo"> Campo </option>
+        <option value="Praia"> Praia </option>
+        <option value="Cidade"> Cidade </option>
+    </select>
+    <select id="idopcoescampo" onchange="opcoescampo()">
+        <!--option value="Festa"> Festa </option>
+        <option value="Descanso"> Descanso </option>
+        <option value="Familia"> Familia </option-->
+    </select>
+    <select id="festacampo" onchange="opfestacampo()" />
+    <!--option value="Rave"> Rave </option>
+        <option value="Tematica"> Temática </option-->
+    <select id="descansocampo" onchange="opdescansocampo()" />
+    <select id="familiacampo" onchange="opfamiliacampo()" />
+
+    <select id="idopcoespraia" onchange="opcoespraia()" />
+    <select id="desertapraia" onchange="opdesertapraia()" />
+    <select id="paradisiacapraia" onchange="opparadisiacapraia()" />
+    <select id="festapraia" onchange="opfestapraia()" />
+
+    <select id="idopcoescidade" onchange="opcoescidade()" />
+    <select id="barcidade" onchange="opbarcidade()" />
+    <select id="casacidade" onchange="opcasacidade()" />
+    <select id="festacidade" onchange="opfestacidade()" />
+
+    <button type="submit">Escolha</button>
+
+    <script>
+        function alterardestino() {
+            var cliquedestino = document.getElementById("selectdestino").value;
+
+            var varopcoescampo = "<option value='Festa'> Festa </option>" +
+                "<option value='Descanso'> Descanso </option>" +
+                "<option value='Familia'> Familia </option>";
+            var varopcoespraia = "<option value='Deserta'> Deserta </option>" +
+                "<option value='Paradisiaca'> Paradisiaca </option>" +
+                "<option value='Festa'> Festa </option>";
+            var varopcoescidade = "<option value='Bar'> Bar </option>" +
+                "<option value='Casa'> Casa </option>" +
+                "<option value='Festa'> Festa </option>";
+
+            //  alert(select);
+            if (cliquedestino == "Campo") {
+                //  alert(selectdestino)
+                document.getElementById("idopcoescampo").innerHTML = varopcoescampo
+            }
+            if (cliquedestino == "Praia") {
+                document.getElementById("idopcoespraia").innerHTML = varopcoespraia
+            }
+            if (cliquedestino == "Cidade") {
+                document.getElementById("idopcoescidade").innerHTML = varopcoescidade
+            }
+        }
+        function opcoescampo() {
+            var cliqueopcampo = document.getElementById("idopcoescampo").value;
+            var cliquefestacampo = document.getElementById("festacampo").value;
+            var cliquedescansocampo = document.getElementById("descansocampo").value;
+            var cliquefamiliacampo = document.getElementById("familiacampo").value;
+
+            var cliqueoppraia = document.getElementById("idopcoespraia").value;
+            var cliquedesertapraia = document.getElementById("desertapraia").value;
+            var cliqueparadisiacapraia = document.getElementById("paradisiacapraia").value;
+            var cliquefestaparaia = document.getElementById("festapraia").value;
+
+            var cliqueopcidade = document.getElementById("idopcoescidade").value;
+            var cliquebarcidade = document.getElementById("barcidade").value;
+            var cliquecasacidade = document.getElementById("casacidade").value;
+            var cliquefestacidade = document.getElementById("festacidade").value;
+
+            var campofesta = "<option value='Rave'> Rave </option>" +
+                "<option value='Tematica'> Temática </option>";
+            var campodescanso = "<option value='Paz'> Paz - Vegetação e Rede </option>" +
+                "<option value='Cachoeira'> Cachoeira </option>";
+            var campofamilia = "<option value='Animais'> Animais e Lazer </option>" +
+                "<option value='Romantico'> Romantico </option>";
+
+            var paraiadeserta = "<option value='Casebre'> Casebre </option>" +
+                "<option value='Casarao'> Casarão </option>";
+            var praiaparadisiaca = "<option value='Luau'> Luau </option>" +
+                "<option value='Livre'> Livre </option>";
+            var praiafesta = "<option value='ulala'> Ulala </option>" +
+                "<option value='Pegacao'> Pegação </option>";
+
+            var cidadebar = "<option value='Paquera'> Paquera </option>" +
+                "<option value='Amigos'> Amigos </option>";
+            var cidadecasa = "<option value='Futebol'> Futebol </option>" +
+                "<option value='Familia'> Familia </option>";
+            var cidadefesta = "<option value='Balada'> Balada </option>" +
+                "<option value='Casa'> Casa </option>";
+
+            if (cliqueopcampo == "Festa") {
+                document.getElementById("opcoescampo").innerHTML = campofesta
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

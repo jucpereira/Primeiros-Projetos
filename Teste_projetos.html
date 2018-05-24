@@ -4,12 +4,11 @@
 
 <head>
     <title>Pra onde você quer ir?</title>
-    <link rel="stylesheet" href="Projeto_casas.css" />
+    <link rel="stylesheet" href="botao.css" />
 </head>
 
-<body id="fundo">
+<body>
     <h1> Escolha seu próximo destino</h1>
-    <h2>
     <select id="primcaixa" onchange="caixa01()">
         <option value=""> Escolha </option>
         <option value="Campo"> Campo </option>
@@ -22,10 +21,11 @@
             <option value="Familia"> Familia </option-->
     </select>
     <select id="tercaixa" onchange="caixa03()"></select>
-</h2>
-    <div>
-        <img id="imagem">
-    </div>
+
+    <button onclick="cliquebotao()">Escolha</button>
+<div>
+    <img id="imagem">
+</div>
     <script>
         function caixa01() {
             var cliqueprimcaixa = document.getElementById("primcaixa").value;
@@ -35,10 +35,10 @@
                 "<option value='Familia'> Familia </option>";
             var varopcoespraia = "<option value=''> Escolha </option> <option value='Deserta'> Deserta </option>" +
                 "<option value='Paradisiaca'> Paradisiaca </option>" +
-                "<option value='BeachFest'> BeachFest </option>";
+                "<option value='Festa'> BeachFest </option>";
             var varopcoescidade = "<option value=''> Escolha </option> <option value='Bar'> Bar </option>" +
                 "<option value='Casa'> Casa </option>" +
-                "<option value='Night'> Night </option>";
+                "<option value='Festa'> Night </option>";
             //  alert(cliqueprimcaixa)
             if (cliqueprimcaixa == "Campo") {
                 // alert(selectdestino)
@@ -73,7 +73,7 @@
             var cidadebar = "<option value=''> Escolha </option> <option value='Paquera'> Paquera </option>" +
                 "<option value='Amigos'> Amigos </option>";
             var cidadecasa = "<option value=''> Escolha </option> <option value='Futebol'> Futebol </option>" +
-                "<option value='Churras'> Familia </option>";
+                "<option value='Familia'> Familia </option>";
             var cidadefesta = "<option value=''> Escolha </option> <option value='Balada'> Balada </option>" +
                 "<option value='Casa'> Casa </option>";
 
@@ -110,84 +110,13 @@
         }
         function caixa03() {
             var cliquetercaixa = document.getElementById("tercaixa").value;
-            //  alert(cliquetercaixa)
+          //  alert(cliquetercaixa)
 
-            if (cliquetercaixa == "Rave") {
-                //alert (document.getElementById("imagem"))
-                document.getElementById("imagem").src = "rave.jpg";
-                document.getElementById("fundo").style.backgroundColor = "black"
-            }
-            if (cliquetercaixa == "Tematica") {
-                //alert (document.getElementById("imagem"))
-                document.getElementById("imagem").src = "tematica.jpg"
-            }
-            if (cliquetercaixa == "Paz") {
-                //alert (document.getElementById("imagem"))
-                document.getElementById("imagem").src = "paz.jpg"
-            }
-            if (cliquetercaixa == "Cachoeira") {
-                //alert (document.getElementById("imagem"))
-                document.getElementById("imagem").src = "cachoeira.jpeg"
-            }
-            if (cliquetercaixa == "Animais") {
-                //alert (document.getElementById("imagem"))
-                document.getElementById("imagem").src = "animais.jpg"
-            }
-            if (cliquetercaixa == "Romantico") {
-                //alert (document.getElementById("imagem"))
-                document.getElementById("imagem").src = "romantico.jpg"
-
-            }
             if (cliquetercaixa == "Casebre") {
-                //alert (document.getElementById("imagem"))
-                document.getElementById("imagem").src = "casebre.jpg"
-            }
-            if (cliquetercaixa == "Casarao") {
-                //alert (document.getElementById("imagem"))
-                document.getElementById("imagem").src = "mansao.jpg"
-            }
-            if (cliquetercaixa == "Luau") {
                 //alert (document.getElementById("imagem"))
                 document.getElementById("imagem").src = "luau.jpg"
             }
-            if (cliquetercaixa == "Livre") {
-                //alert (document.getElementById("imagem"))
-                document.getElementById("imagem").src = "nudismo.jpg"
-            }
-            if (cliquetercaixa == "Ulala") {
-                //alert (document.getElementById("imagem"))
-                document.getElementById("imagem").src = "ulala.jpg"
-            }
-            if (cliquetercaixa == "Pegacao") {
-                //alert (document.getElementById("imagem"))
-                document.getElementById("imagem").src = "pegacao.jpg"
-            }
-            if (cliquetercaixa == "Paquera") {
-                //alert (document.getElementById("imagem"))
-                document.getElementById("imagem").src = "paquera.jpg"
-            }
-            if (cliquetercaixa == "Amigos") {
-                //alert (document.getElementById("imagem"))
-                document.getElementById("imagem").src = "amigos.jpg"
-            }
-            if (cliquetercaixa == "Futebol") {
-                //alert (document.getElementById("imagem"))
-                document.getElementById("imagem").src = "futebol.jpg"
-            }
-            if (cliquetercaixa == "Churras") {
-                //alert (document.getElementById("imagem"))
-                document.getElementById("imagem").src = "familia.jpg"
-            }
-            if (cliquetercaixa == "Balada") {
-                //alert (document.getElementById("imagem"))
-                document.getElementById("imagem").src = "balada.jpg"
-            }
-            if (cliquetercaixa == "Casa") {
-                //alert (document.getElementById("imagem"))
-                document.getElementById("imagem").src = "casa.jpg"
-            }
         }
-
 
     </script>
 </body>
